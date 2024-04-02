@@ -12,12 +12,12 @@ fn main() {
     });
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+
+#[cfg(feature = "modbus")]
+#[derive(Debug, Serialize,Deserialize)]
 struct SqlError {
-    #[cfg(feature = "modbus")]
     a: i32,
-    #[cfg(feature = "modbus")]
     b: i32,
-    #[cfg(feature = "modbus")]
     c: i32,
 }
+
